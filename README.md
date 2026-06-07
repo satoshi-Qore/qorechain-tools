@@ -6,6 +6,8 @@ QoreChain node tools and scripts for community operators, light node users, and 
 
 This repository collects practical utilities and notes for working with QoreChain infrastructure. The goal is to make common node operations easier to repeat, document useful commands, and help new operators understand the workflow around setup, monitoring, and maintenance.
 
+The repository is intentionally conservative: examples use placeholders, avoid private data, and do not assume final mainnet behavior.
+
 ## Focus Areas
 
 - Light node setup support
@@ -23,14 +25,21 @@ This repository collects practical utilities and notes for working with QoreChai
 
 ## Repository Structure
 
-As this toolkit grows, scripts and notes can be organized around these areas:
-
 ```text
-scripts/        Reusable shell scripts and helpers
+scripts/        Reusable shell scripts and helper guidance
 docs/           Setup notes and operational documentation
-examples/       Example commands and configuration snippets
+examples/       Example commands, checklists, and configuration snippets
 README.md       Project overview and usage guide
 ```
+
+## Current Resources
+
+| Resource | Purpose |
+|---|---|
+| [scripts/README.md](./scripts/README.md) | Script safety rules and planned helper categories |
+| [docs/README.md](./docs/README.md) | Operational documentation structure and writing guidance |
+| [examples/README.md](./examples/README.md) | Example usage rules and available examples |
+| [examples/rpc-checklist.md](./examples/rpc-checklist.md) | Generic RPC endpoint and network configuration checklist |
 
 ## Usage
 
@@ -41,13 +50,22 @@ git clone https://github.com/satoshi-Qore/qorechain-tools.git
 cd qorechain-tools
 ```
 
-Review any script before running it, then follow the instructions included with that script or document.
+Review any script, checklist, or command before using it. Replace placeholder values such as `YOUR_RPC_URL`, `YOUR_CHAIN_ID`, and `YOUR_SERVER_IP` with verified information from trusted sources.
+
+## Suggested Workflow
+
+1. Start with the relevant checklist or documentation page.
+2. Confirm the source of any endpoint, chain ID, or configuration value.
+3. Back up configuration files before editing them.
+4. Use read-only checks before making changes.
+5. Compare community notes with official QoreChain documentation for critical steps.
 
 ## Related Projects
 
 - [QoreChain Light Node](https://github.com/satoshi-Qore/qorechain-lightnode)
 - [QoreChain Guides](https://github.com/satoshi-Qore/qorechain-guides)
 - [QoreChain Notes](https://github.com/satoshi-Qore/Qorechain-notes)
+- [QoreChain Academic Paper](https://github.com/satoshi-Qore/qorechain-academic-paper)
 
 ## Contribution
 
@@ -59,6 +77,8 @@ Community improvements are welcome. Useful additions include:
 - Monitoring examples
 - Clear explanations for new node operators
 
+When contributing, keep examples generic and avoid adding secrets, wallet seeds, private keys, personal RPC credentials, or unsupported reward claims.
+
 ## Disclaimer
 
-This is a community-maintained repository and is not officially affiliated with QoreChain.
+This is a community-maintained repository and is not officially affiliated with QoreChain. It is intended for educational and operational note-taking purposes. Official QoreChain documentation and current announcements should be checked for critical or changing details.
