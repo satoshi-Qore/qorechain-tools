@@ -9,15 +9,16 @@ The goal is to collect practical, repeatable, and reviewable documentation for c
 | Topic | Description | Status |
 |---|---|---|
 | [Operator Safety Guidelines](./operator-safety.md) | Safe handling of logs, configuration files, credentials, support requests, and public examples | Available |
+| [Troubleshooting Checklist](./troubleshooting.md) | Structured checks for service status, logs, network, disk, configuration, and support requests | Available |
 
 ## Planned Topics
 
 | Topic | Description | Status |
 |---|---|---|
 | VPS preparation | Basic server setup checklist for node-related work | Planned |
-| Service monitoring | How to check process status, logs, and uptime | Planned |
+| Service monitoring | How to check process status, logs, and uptime | Started |
 | RPC usage | Notes for endpoint configuration and validation | Planned |
-| Troubleshooting | Common checks before asking for support | Planned |
+| Troubleshooting | Common checks before asking for support | Available |
 | Security basics | Key handling, firewall awareness, and backup habits | Started |
 
 ## Writing Style
