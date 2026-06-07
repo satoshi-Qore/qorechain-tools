@@ -26,10 +26,13 @@ The repository is intentionally conservative: examples use placeholders, avoid p
 ## Repository Structure
 
 ```text
-scripts/        Reusable shell scripts and helper guidance
-docs/           Setup notes and operational documentation
-examples/       Example commands, checklists, and configuration snippets
-README.md       Project overview and usage guide
+scripts/           Reusable shell scripts and helper guidance
+docs/              Setup notes and operational documentation
+examples/          Example commands, checklists, and configuration snippets
+CONTRIBUTING.md    Contribution guidelines
+SECURITY.md        Security and sensitive-data policy
+LICENSE            MIT License
+README.md          Project overview and usage guide
 ```
 
 ## Current Resources
@@ -40,6 +43,9 @@ README.md       Project overview and usage guide
 | [docs/README.md](./docs/README.md) | Operational documentation structure and writing guidance |
 | [examples/README.md](./examples/README.md) | Example usage rules and available examples |
 | [examples/rpc-checklist.md](./examples/rpc-checklist.md) | Generic RPC endpoint and network configuration checklist |
+| [CONTRIBUTING.md](./CONTRIBUTING.md) | Contribution rules for safe community additions |
+| [SECURITY.md](./SECURITY.md) | Sensitive-data and security reporting notes |
+| [LICENSE](./LICENSE) | MIT License |
 
 ## Usage
 
@@ -79,6 +85,12 @@ Community improvements are welcome. Useful additions include:
 
 When contributing, keep examples generic and avoid adding secrets, wallet seeds, private keys, personal RPC credentials, or unsupported reward claims.
 
+For more details, see [CONTRIBUTING.md](./CONTRIBUTING.md) and [SECURITY.md](./SECURITY.md).
+
 ## Disclaimer
 
 This is a community-maintained repository and is not officially affiliated with QoreChain. It is intended for educational and operational note-taking purposes. Official QoreChain documentation and current announcements should be checked for critical or changing details.
+
+## License
+
+This repository is licensed under the [MIT License](./LICENSE).
