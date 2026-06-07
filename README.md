@@ -42,6 +42,7 @@ README.md          Project overview and usage guide
 | [scripts/README.md](./scripts/README.md) | Script safety rules and planned helper categories |
 | [docs/README.md](./docs/README.md) | Operational documentation structure and writing guidance |
 | [docs/operator-safety.md](./docs/operator-safety.md) | Safe handling of logs, configuration files, credentials, support requests, and public examples |
+| [docs/troubleshooting.md](./docs/troubleshooting.md) | Structured checks for service status, logs, network, disk, configuration, and support requests |
 | [examples/README.md](./examples/README.md) | Example usage rules and available examples |
 | [examples/rpc-checklist.md](./examples/rpc-checklist.md) | Generic RPC endpoint and network configuration checklist |
 | [examples/node-health-check.md](./examples/node-health-check.md) | Generic server, container, port, log, and panel health-check flow |
