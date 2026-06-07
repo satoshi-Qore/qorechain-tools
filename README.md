@@ -41,6 +41,7 @@ README.md          Project overview and usage guide
 |---|---|
 | [scripts/README.md](./scripts/README.md) | Script safety rules and planned helper categories |
 | [docs/README.md](./docs/README.md) | Operational documentation structure and writing guidance |
+| [docs/operator-safety.md](./docs/operator-safety.md) | Safe handling of logs, configuration files, credentials, support requests, and public examples |
 | [examples/README.md](./examples/README.md) | Example usage rules and available examples |
 | [examples/rpc-checklist.md](./examples/rpc-checklist.md) | Generic RPC endpoint and network configuration checklist |
 | [examples/node-health-check.md](./examples/node-health-check.md) | Generic server, container, port, log, and panel health-check flow |
@@ -88,11 +89,3 @@ Community improvements are welcome. Useful additions include:
 When contributing, keep examples generic and avoid adding secrets, wallet seeds, private keys, personal RPC credentials, or unsupported reward claims.
 
 For more details, see [CONTRIBUTING.md](./CONTRIBUTING.md) and [SECURITY.md](./SECURITY.md).
-
-## Disclaimer
-
-This is a community-maintained repository and is not officially affiliated with QoreChain. It is intended for educational and operational note-taking purposes. Official QoreChain documentation and current announcements should be checked for critical or changing details.
-
-## License
-
-This repository is licensed under the [MIT License](./LICENSE).
