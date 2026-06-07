@@ -4,6 +4,12 @@ This directory contains operational notes for QoreChain-related infrastructure w
 
 The goal is to collect practical, repeatable, and reviewable documentation for community operators without making unsupported assumptions about mainnet behavior or future reward mechanics.
 
+## Available Topics
+
+| Topic | Description | Status |
+|---|---|---|
+| [Operator Safety Guidelines](./operator-safety.md) | Safe handling of logs, configuration files, credentials, support requests, and public examples | Available |
+
 ## Planned Topics
 
 | Topic | Description | Status |
@@ -12,7 +18,7 @@ The goal is to collect practical, repeatable, and reviewable documentation for c
 | Service monitoring | How to check process status, logs, and uptime | Planned |
 | RPC usage | Notes for endpoint configuration and validation | Planned |
 | Troubleshooting | Common checks before asking for support | Planned |
-| Security basics | Key handling, firewall awareness, and backup habits | Planned |
+| Security basics | Key handling, firewall awareness, and backup habits | Started |
 
 ## Writing Style
 
