@@ -44,6 +44,7 @@ README.md          Project overview and usage guide
 | [examples/README.md](./examples/README.md) | Example usage rules and available examples |
 | [examples/rpc-checklist.md](./examples/rpc-checklist.md) | Generic RPC endpoint and network configuration checklist |
 | [examples/node-health-check.md](./examples/node-health-check.md) | Generic server, container, port, log, and panel health-check flow |
+| [examples/log-checklist.md](./examples/log-checklist.md) | Generic log review, error search, restart preparation, and sanitized sharing flow |
 | [CONTRIBUTING.md](./CONTRIBUTING.md) | Contribution rules for safe community additions |
 | [SECURITY.md](./SECURITY.md) | Sensitive-data and security reporting notes |
 | [LICENSE](./LICENSE) | MIT License |
