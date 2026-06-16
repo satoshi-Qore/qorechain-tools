@@ -9,6 +9,7 @@ Examples should be safe, generic, and easy to adapt. They should not include pri
 | Example | Purpose |
 |---|---|
 | [Operator Daily Check](./operator-daily-check.md) | Daily VPS, container, panel, log, and support-request review flow for operators |
+| [Support Request Template](./support-request-template.md) | Structured template for asking for help while protecting sensitive information |
 | [RPC Checklist](./rpc-checklist.md) | Basic checklist for reviewing RPC endpoint and network configuration |
 | [Node Health Check](./node-health-check.md) | Generic server, container, port, log, and panel health-check flow |
 | [Log Checklist](./log-checklist.md) | Generic log review, error search, restart preparation, and sanitized sharing flow |
@@ -23,7 +24,7 @@ Examples should be safe, generic, and easy to adapt. They should not include pri
 
 ## Recommended Starting Point
 
-New operators should start with [Operator Daily Check](./operator-daily-check.md), then use the more focused checklists when a specific issue appears.
+New operators should start with [Operator Daily Check](./operator-daily-check.md), then use [Support Request Template](./support-request-template.md) before asking for help publicly.
 
 ## Disclaimer
 
