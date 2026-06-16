@@ -46,6 +46,7 @@ README.md          Project overview and usage guide
 | [docs/troubleshooting.md](./docs/troubleshooting.md) | Structured checks for service status, logs, network, disk, configuration, and support requests |
 | [examples/README.md](./examples/README.md) | Example usage rules and available examples |
 | [examples/operator-daily-check.md](./examples/operator-daily-check.md) | Daily operator review flow for VPS, Docker, panel, logs, and safe support requests |
+| [examples/support-request-template.md](./examples/support-request-template.md) | Structured template for asking for help while protecting sensitive information |
 | [examples/rpc-checklist.md](./examples/rpc-checklist.md) | Generic RPC endpoint and network configuration checklist |
 | [examples/node-health-check.md](./examples/node-health-check.md) | Generic server, container, port, log, and panel health-check flow |
 | [examples/log-checklist.md](./examples/log-checklist.md) | Generic log review, error search, restart preparation, and sanitized sharing flow |
@@ -82,7 +83,8 @@ bash scripts/health-check.sh CONTAINER_NAME
 2. Run read-only system checks before changing anything.
 3. Review container status, recent logs, disk space, memory usage, and listening ports.
 4. Record findings in a short daily note.
-5. Share only sanitized logs or placeholders when asking for help.
+5. Use [Support Request Template](./examples/support-request-template.md) before asking for help publicly.
+6. Share only sanitized logs or placeholders when asking for help.
 
 ## Suggested Workflow
 
