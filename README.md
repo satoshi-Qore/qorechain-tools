@@ -39,11 +39,13 @@ README.md          Project overview and usage guide
 
 | Resource | Purpose |
 |---|---|
-| [scripts/README.md](./scripts/README.md) | Script safety rules and planned helper categories |
+| [scripts/README.md](./scripts/README.md) | Script safety rules and helper categories |
+| [scripts/health-check.sh](./scripts/health-check.sh) | Read-only system, Docker, port, and optional container log health-check helper |
 | [docs/README.md](./docs/README.md) | Operational documentation structure and writing guidance |
 | [docs/operator-safety.md](./docs/operator-safety.md) | Safe handling of logs, configuration files, credentials, support requests, and public examples |
 | [docs/troubleshooting.md](./docs/troubleshooting.md) | Structured checks for service status, logs, network, disk, configuration, and support requests |
 | [examples/README.md](./examples/README.md) | Example usage rules and available examples |
+| [examples/operator-daily-check.md](./examples/operator-daily-check.md) | Daily operator review flow for VPS, Docker, panel, logs, and safe support requests |
 | [examples/rpc-checklist.md](./examples/rpc-checklist.md) | Generic RPC endpoint and network configuration checklist |
 | [examples/node-health-check.md](./examples/node-health-check.md) | Generic server, container, port, log, and panel health-check flow |
 | [examples/log-checklist.md](./examples/log-checklist.md) | Generic log review, error search, restart preparation, and sanitized sharing flow |
@@ -61,6 +63,26 @@ cd qorechain-tools
 ```
 
 Review any script, checklist, or command before using it. Replace placeholder values such as `YOUR_RPC_URL`, `YOUR_CHAIN_ID`, and `YOUR_SERVER_IP` with verified information from trusted sources.
+
+Run the read-only health check helper:
+
+```bash
+bash scripts/health-check.sh
+```
+
+Include recent logs for one container:
+
+```bash
+bash scripts/health-check.sh CONTAINER_NAME
+```
+
+## Daily Operator Workflow
+
+1. Start with [Operator Daily Check](./examples/operator-daily-check.md).
+2. Run read-only system checks before changing anything.
+3. Review container status, recent logs, disk space, memory usage, and listening ports.
+4. Record findings in a short daily note.
+5. Share only sanitized logs or placeholders when asking for help.
 
 ## Suggested Workflow
 
