@@ -1,0 +1,26 @@
+name: RPC Health Check
+
+on:
+  workflow_dispatch:
+
+jobs:
+  rpc-health-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Run example RPC health check
+        run: python scripts/rpc_health_monitor.py examples/endpoints.example.json --output reports/latest-report.md
+
+      - name: Upload generated report
+        uses: actions/upload-artifact@v4
+        with:
+          name: rpc-health-report
+          path: reports/latest-report.md
