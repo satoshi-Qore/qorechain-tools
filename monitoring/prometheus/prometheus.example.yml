@@ -1,0 +1,25 @@
+# Prometheus configuration example for QoreChain node monitoring.
+# Copy this file to prometheus.yml and replace placeholders before use.
+# prometheus.yml is gitignored -- do not commit private IPs or credentials.
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+rule_files:
+  - "rules.yml"
+
+scrape_configs:
+  # Node exporter -- system metrics (CPU, memory, disk, network)
+  - job_name: "node"
+    static_configs:
+      - targets:
+          - "YOUR_NODE_IP:9100"
+        labels:
+          instance: "YOUR_CHAIN_ID-node"
+
+  # Example: additional RPC or process exporter
+  # - job_name: "rpc"
+  #   static_configs:
+  #     - targets:
+  #         - "YOUR_NODE_IP:YOUR_RPC_METRICS_PORT"
