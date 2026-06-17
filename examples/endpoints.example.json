@@ -1,0 +1,16 @@
+{
+  "endpoints": [
+    {
+      "name": "Example QoreChain RPC",
+      "url": "https://YOUR_RPC_URL",
+      "method": "status",
+      "timeout_seconds": 10
+    },
+    {
+      "name": "Example Local RPC",
+      "url": "http://127.0.0.1:26657",
+      "method": "status",
+      "timeout_seconds": 5
+    }
+  ]
+}
