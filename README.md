@@ -122,6 +122,7 @@ Before deploying, review [docs/monitoring-checklist.md](./docs/monitoring-checkl
 | [monitoring/alerts/example-rules.yml](./monitoring/alerts/example-rules.yml) | Example alert rules |
 | [examples/endpoints.example.json](./examples/endpoints.example.json) | RPC endpoint config example |
 | [examples/sample-rpc-report.md](./examples/sample-rpc-report.md) | Sample RPC health report |
+| [examples/operator-preflight-report.md](./examples/operator-preflight-report.md) | Sample operator preflight report |
 | [examples/post-incident-report.md](./examples/post-incident-report.md) | Post-incident report template |
 | [examples/operator-daily-check.md](./examples/operator-daily-check.md) | Daily operator checklist |
 | [examples/support-request-template.md](./examples/support-request-template.md) | Support request template |
