@@ -51,6 +51,8 @@ python3 scripts/operator_preflight_check.py --profile monitoring-node --output r
 python3 scripts/operator_preflight_check.py --profile validator-preparation --path /var/lib/qorechain
 ```
 
+Using `--output` writes only the generated Markdown report file; it does not change node, Docker, or system configuration.
+
 See [docs/operator-preflight-check-spec.md](./docs/operator-preflight-check-spec.md) for the full design specification.
 
 ## RPC Health Monitor
