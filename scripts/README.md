@@ -9,6 +9,7 @@ Scripts should be small, readable, and safe to review before execution. Avoid ad
 | Script | Purpose | Safety Profile |
 |---|---|---|
 | [health-check.sh](./health-check.sh) | Collect basic system, disk, memory, port, Docker, and optional container log information | Read-only |
+| [operator_preflight_check.py](./operator_preflight_check.py) | Check Docker, Docker Compose, disk space, and memory before setup or troubleshooting | Read-only; optional report export |
 | [rpc_health_monitor.py](./rpc_health_monitor.py) | Check configured JSON-RPC endpoints and generate Markdown health reports | Read-only |
 
 ## Script Guidelines
@@ -34,6 +35,26 @@ Include recent logs for one container:
 bash scripts/health-check.sh CONTAINER_NAME
 ```
 
+Run the operator preflight check:
+
+```bash
+python3 scripts/operator_preflight_check.py
+```
+
+Run a specific operator preflight profile:
+
+```bash
+python3 scripts/operator_preflight_check.py --profile light-node
+python3 scripts/operator_preflight_check.py --profile monitoring-node
+python3 scripts/operator_preflight_check.py --profile validator-preparation
+```
+
+Save an operator preflight report to a file:
+
+```bash
+python3 scripts/operator_preflight_check.py --output reports/preflight.md
+```
+
 Run the RPC health monitor with a local endpoint configuration:
 
 ```bash
@@ -53,6 +74,7 @@ Replace `CONTAINER_NAME` and `endpoints.local.json` with values appropriate for 
 | Script Type | Purpose | Status |
 |---|---|---|
 | Service checks | Verify whether expected services are running | Started |
+| Preflight checks | Check operator environment readiness before setup or troubleshooting | Available |
 | Log helpers | Show recent logs or filter common errors | Started |
 | RPC checks | Test connectivity to configured JSON-RPC endpoints | Available |
 | Backup helpers | Copy configuration files before changes | Planned |
