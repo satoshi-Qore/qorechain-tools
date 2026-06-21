@@ -110,8 +110,12 @@ def get_memory_info() -> tuple[float | None, float | None, str]:
 
         status = MemoryStatus()
         status.dwLength = ctypes.sizeof(MemoryStatus)
-        if ctypes.windll.kernel32.GlobalMemoryStatusEx(ctypes.byref(status)):
-            return status.ullTotalPhys / GB, status.ullAvailPhys / GB, "Windows GlobalMemoryStatusEx"
+        try:
+            kernel32 = ctypes.windll.kernel32
+            if kernel32.GlobalMemoryStatusEx(ctypes.byref(status)):
+                return status.ullTotalPhys / GB, status.ullAvailPhys / GB, "Windows GlobalMemoryStatusEx"
+        except (AttributeError, OSError) as exc:
+            return None, None, f"Windows memory API unavailable: {exc}"
         return None, None, "Windows memory API unavailable"
 
     if hasattr(os, "sysconf"):
@@ -301,9 +305,14 @@ def main() -> int:
 
     markdown_report = build_markdown_report(args.profile, check_path, results)
     if args.output:
-        output_path = Path(args.output).expanduser().resolve()
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        output_path.write_text(markdown_report, encoding="utf-8")
+        try:
+            output_path = Path(args.output).expanduser().resolve()
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+            output_path.write_text(markdown_report, encoding="utf-8")
+        except OSError as exc:
+            print("", file=sys.stderr)
+            print(f"Could not write Markdown report: {exc}", file=sys.stderr)
+            return 1
         print("")
         print(f"Markdown report written to: {output_path}")
     else:
