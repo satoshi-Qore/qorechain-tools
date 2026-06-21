@@ -10,6 +10,7 @@ Examples should be safe, generic, and easy to adapt. They should not include pri
 |---|---|
 | [endpoints.example.json](./endpoints.example.json) | Example JSON-RPC endpoint configuration for the RPC health monitor |
 | [sample-rpc-report.md](./sample-rpc-report.md) | Sample Markdown output from an RPC health report |
+| [operator-preflight-report.md](./operator-preflight-report.md) | Sample Markdown output from an operator preflight check |
 | [post-incident-report.md](./post-incident-report.md) | Template for documenting an incident after review |
 | [Operator Daily Check](./operator-daily-check.md) | Daily VPS, container, panel, log, and support-request review flow for operators |
 | [Support Request Template](./support-request-template.md) | Structured template for asking for help while protecting sensitive information |
@@ -28,6 +29,8 @@ Examples should be safe, generic, and easy to adapt. They should not include pri
 ## Recommended Starting Point
 
 New operators should start with [Operator Daily Check](./operator-daily-check.md), then use [Support Request Template](./support-request-template.md) before asking for help publicly.
+
+For operator environment checks, compare generated output with [operator-preflight-report.md](./operator-preflight-report.md).
 
 For RPC monitoring, start by copying [endpoints.example.json](./endpoints.example.json) and compare generated output with [sample-rpc-report.md](./sample-rpc-report.md).
 
