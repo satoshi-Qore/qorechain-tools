@@ -31,6 +31,28 @@ LICENSE            MIT License
 README.md          This file
 ```
 
+## Operator Preflight Check
+
+A minimal read-only Python utility for checking whether an operator environment appears ready before setup, troubleshooting, or support requests.
+
+The v0.1 prototype checks:
+
+- Docker availability
+- Docker Compose availability
+- Available disk space
+- Available memory
+
+It does not perform RPC checks, port checks, or config file checks yet.
+
+```bash
+python3 scripts/operator_preflight_check.py
+python3 scripts/operator_preflight_check.py --profile light-node
+python3 scripts/operator_preflight_check.py --profile monitoring-node --output reports/preflight.md
+python3 scripts/operator_preflight_check.py --profile validator-preparation --path /var/lib/qorechain
+```
+
+See [docs/operator-preflight-check-spec.md](./docs/operator-preflight-check-spec.md) for the full design specification.
+
 ## RPC Health Monitor
 
 A Python CLI tool that checks JSON-RPC endpoint availability and generates Markdown reports.
@@ -82,7 +104,9 @@ Before deploying, review [docs/monitoring-checklist.md](./docs/monitoring-checkl
 | Resource | Purpose |
 |---|---|
 | [scripts/rpc_health_monitor.py](./scripts/rpc_health_monitor.py) | RPC endpoint health check CLI |
+| [scripts/operator_preflight_check.py](./scripts/operator_preflight_check.py) | Read-only operator environment preflight check prototype |
 | [scripts/health-check.sh](./scripts/health-check.sh) | Read-only system and Docker health check |
+| [docs/operator-preflight-check-spec.md](./docs/operator-preflight-check-spec.md) | Operator preflight check design specification |
 | [docs/rpc-configuration.md](./docs/rpc-configuration.md) | RPC monitor configuration guide |
 | [docs/monitoring-checklist.md](./docs/monitoring-checklist.md) | Monitoring deployment checklist |
 | [docs/operator-safety.md](./docs/operator-safety.md) | Safe log and credential handling |
@@ -108,6 +132,26 @@ Before deploying, review [docs/monitoring-checklist.md](./docs/monitoring-checkl
 ```bash
 git clone https://github.com/satoshi-Qore/qorechain-tools.git
 cd qorechain-tools
+```
+
+Run the operator preflight check:
+
+```bash
+python3 scripts/operator_preflight_check.py
+```
+
+Run a specific preflight profile:
+
+```bash
+python3 scripts/operator_preflight_check.py --profile light-node
+python3 scripts/operator_preflight_check.py --profile monitoring-node
+python3 scripts/operator_preflight_check.py --profile validator-preparation
+```
+
+Save a Markdown preflight report:
+
+```bash
+python3 scripts/operator_preflight_check.py --output reports/preflight.md
 ```
 
 Always replace placeholder values (`YOUR_RPC_URL`, `YOUR_CHAIN_ID`, `YOUR_NODE_IP`) with verified values before use.
